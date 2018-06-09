@@ -38,6 +38,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 #footer {
   background-color: #444;
@@ -183,13 +185,13 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
-.inside header {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
-.inside #map-container {
+#map-container {
   background: blue none repeat scroll 0 0;
   height: 87%;
   position: fixed;
@@ -197,12 +199,12 @@ nav h1 a {
   top: 80px;
   width: 50%;
 }
-.inside #map {
+#map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
 }
-.inside #footer {
+#footer {
   bottom: 0;
   position: absolute;
   width: 50%;
@@ -234,7 +236,7 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+  width: 90%;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
@@ -272,4 +274,26 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media screen and (max-width: 889px) {
+  #map-container{
+    height: 60vw;
+    width: 100% !important;
+    position: static;
+  }
+  #restaurant-container, #reviews-container{
+    width: 100%;
+    padding-top: 20px;
+  }
+  #breadcrumb, #footer{
+    width: 100%;
+  }
+  #restaurant-img, #restaurant-cuisine{
+    width: 100%;
+  }
+  #restaurant-name{
+    text-align: center;
+  }
+
 }
