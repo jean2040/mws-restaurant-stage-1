@@ -66,7 +66,21 @@
   <!-- Google Maps -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBNzD6CALYV6jdxGzasM4PVnQvuQjlEM0&libraries=places&callback=initMap"></script>
   <!-- End scripts -->
-
+  <script>
+      //Register service Worker
+      if('serviceWorker' in navigator){
+          navigator.serviceWorker
+              .register('/sw.js')
+              .then(reg => {
+                  console.log("Service Worker Registered " + reg.scope);
+              })
+              .catch(error=>{
+                  console.log("Registration Error: " + error)
+              })
+      }
+  </script>
 </body>
+
+
 
 </html>

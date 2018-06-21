@@ -17,9 +17,10 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
+    <section id="map-container" aria-labelledby="map-description" role="application">
       <div id="map"></div>
     </section>
+    <label id="map-description">Google Map Application</label>
     <section id="select-neighborhoods">
       <div class="filter-options" >
         <h2>Filter Results</h2>
@@ -42,6 +43,20 @@
   <footer id="footer">
     Copyright (c) 2017 <a href="/" tabindex="1"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
+
+<script>
+  //Register service Worker
+  if('serviceWorker' in navigator){
+      navigator.serviceWorker
+          .register('/sw.js')
+          .then(reg => {
+              console.log("Service Worker Registered " + reg.scope);
+          })
+          .catch(error=>{
+              console.log("Registration Error: " + error)
+          })
+  }
+</script>
 
 </body>
 
