@@ -178,6 +178,7 @@ nav h1 a {
   margin: 0;
   max-width: 100%;
   min-width: 100%;
+  overflow: hidden;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -198,12 +199,16 @@ nav h1 a {
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
-  font-size: 10pt;
+  font-size: 13pt;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.labels{
+  display: none;
 }
 
 /* ====================== Restaurant Details ====================== */

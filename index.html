@@ -20,13 +20,15 @@
     <section id="map-container" aria-labelledby="map-description" role="application">
       <div id="map"></div>
     </section>
-    <label id="map-description">Google Map Application</label>
+    <label id="map-description" class="labels">Google Map Application</label>
     <section id="select-neighborhoods">
       <div class="filter-options" >
         <h2>Filter Results</h2>
+        <label for="neighborhoods-select" class="labels">Select a Cuisine</label>
         <select aria-label="Select a NeighborHood"  id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="1">
           <option value="all">All Neighborhoods</option>
         </select>
+        <label for="cuisines-select" class="labels">Select a Cuisine</label>
         <select aria-label="Select a Cuisine" id="cuisines-select" name="cuisines" onchange="updateRestaurants()" tabindex="1">
           <option value="all">All Cuisines</option>
         </select>
