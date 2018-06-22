@@ -26,7 +26,8 @@ self.addEventListener('install', function(event){
                        '/js/dbhelper.js',
                        '/js/main.js',
                        '/js/restaurant_info.js',
-                       '/js/register_sw.js'
+                       '/js/register_sw.js',
+
             ])
                    .catch(error => {
                        console.log("Caches open failed " + error)
@@ -49,7 +50,7 @@ self.addEventListener('fetch', event=>{
         event.request.mode = "no-cors";
     }
 
-    console.log(`Fetching: ${event.request.url}`);
+    //console.log(`Fetching: ${event.request.url}`);
     event.respondWith(
         caches.match(cacheRequest)
             .then(response=>{
